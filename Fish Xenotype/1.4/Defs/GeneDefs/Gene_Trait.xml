@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <GeneDef>
+	<defName>FisherManGene</defName>
+	<label>Fishing proficiency</label>
+	<labelShortAdj>Fisherman</labelShortAdj>
+	<description>Carriers of this gene feel the need to hunt the local aquatic fauna </description>
+	<iconPath>UI/Icons/Genes/Gene_Fisherman</iconPath>
+	<displayOrderInCategory>20</displayOrderInCategory>
+	<forcedTraits>
+		<li>
+		<def>VCEF_Fisherman</def>
+		</li>
+	</forcedTraits>
+	<biostatMet>-1</biostatMet>
+	<biostatCpx>1</biostatCpx>
+	</GeneDef>
+	
+	<GeneDef>
+		<defName>SwimmingGene</defName>
+		<label>Swimming proficiency</label>
+		<labelShortAdj>Swimming</labelShortAdj>
+		<description>Carriers of this gene can use their ability to swim faster while on water </description>
+		<iconPath>UI/Icons/Genes/Gene_Swim</iconPath>
+		<displayOrderInCategory>22</displayOrderInCategory>
+		<conditionalStatAffecters>	
+			<li Class="VanillaGenesExpanded.ConditionalStatAffecter_Water">
+				<statFactors>
+					<MoveSpeed>8</MoveSpeed>				
+				</statFactors>
+			</li>
+		</conditionalStatAffecters>
+		<biostatMet>-2</biostatMet>
+		<biostatCpx>3</biostatCpx>
+	</GeneDef>
+	
+	<GeneDef>
+		<defName>InnateCircadian HalfCycler</defName>
+		<label>innate Circadian HalfCycler</label>
+		<iconPath>UI/Icons/Genes/Gene_Sleepthing</iconPath>
+		<description>Carriers of this gene have develop a Circadian HalfCycler to have a similar sleep performance as aquatic creatures</description>
+		<displayOrderInCategory>310</displayOrderInCategory>
+		<biostatMet>-4</biostatMet>
+		<biostatCpx>5</biostatCpx>
+		<customEffectDescriptions>
+		<li>Natural HalfCycler</li>
+		</customEffectDescriptions>
+		<modExtensions>
+		<li Class="VanillaGenesExpanded.GeneExtension">
+			<hediffsToBodyParts>
+			<li>
+			<hediff>CircadianHalfCycler</hediff>
+			<bodyparts>
+				<li>Brain</li>
+			</bodyparts>
+			</li>
+			</hediffsToBodyParts>
+		</li>
+		</modExtensions>
+	</GeneDef>
+</Defs>
+
+
